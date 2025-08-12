@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Navigation } from "@/components/ui/navigation";
 import { ArrowRight, Shield, Users, Zap, TrendingUp, Globe, Lock } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-simple-circle.jpg";
+import heroImage from "@/assets/savings-community-real.jpg";
 
 const Index = () => {
   return (
@@ -39,13 +39,13 @@ const Index = () => {
             </div>
             
             <div className="flex justify-center">
-              <div className="relative">
+              <div className="relative w-full max-w-3xl">
                 <img 
                   src={heroImage} 
-                  alt="Simple Savings Circle Community" 
-                  className="rounded-2xl w-full max-w-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  alt="Community savings and financial planning - Real people collaborating" 
+                  className="rounded-2xl w-full h-96 object-cover shadow-2xl hover:shadow-3xl transition-shadow duration-300"
                 />
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-primary/5 to-transparent"></div>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-primary/10 to-transparent"></div>
               </div>
             </div>
           </div>
