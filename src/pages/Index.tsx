@@ -47,12 +47,11 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-3xl" />
+            <div className="flex justify-center">
               <img 
                 src={heroImage} 
                 alt="Savings Circle Community" 
-                className="relative rounded-3xl shadow-2xl w-full"
+                className="rounded-lg w-full max-w-md"
               />
             </div>
           </div>
