@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Navigation } from "@/components/ui/navigation";
 import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { CreateCircleDialog } from "@/components/CreateCircleDialog";
 import { 
   Plus, 
   Users, 
@@ -82,10 +83,12 @@ const Dashboard = () => {
                   Manage your savings circles and track your progress toward financial goals.
                 </p>
               </div>
-              <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
-                <Plus className="h-4 w-4 mr-2" />
-                Create New Circle
-              </Button>
+              <CreateCircleDialog>
+                <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
+                  <Plus className="h-4 w-4 mr-2" />
+                  Create New Circle
+                </Button>
+              </CreateCircleDialog>
             </div>
           </div>
         </div>
