@@ -11,18 +11,13 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-16">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5" />
+      <section className="pt-16">
         <div className="container mx-auto px-4 py-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                  <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                    Decentralized
-                  </span>
-                  <br />
-                  Savings Circles
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
+                  Decentralized Savings Circles
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
                   Join trusted savings groups where members contribute periodically and take turns collecting the lump sum. 
@@ -31,17 +26,13 @@ const Index = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity shadow-lg"
-                  asChild
-                >
+                <Button size="lg" asChild>
                   <Link to="/dashboard" className="flex items-center">
                     Start Your Circle
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-primary/20 hover:bg-primary/5">
+                <Button size="lg" variant="outline">
                   Learn More
                 </Button>
               </div>
@@ -59,7 +50,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 bg-muted/30">
+      <section className="py-24 bg-muted/10">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Why Choose AhjoorCircle?</h2>
@@ -69,10 +60,10 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
+            <Card className="border hover:shadow-md transition-shadow">
               <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-gradient-to-r from-primary to-primary-glow flex items-center justify-center mb-4">
-                  <Shield className="h-6 w-6 text-primary-foreground" />
+                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Shield className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle>Blockchain Security</CardTitle>
               </CardHeader>
@@ -83,10 +74,10 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
+            <Card className="border hover:shadow-md transition-shadow">
               <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-gradient-to-r from-secondary to-success flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-secondary-foreground" />
+                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Users className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle>Trusted Community</CardTitle>
               </CardHeader>
@@ -97,10 +88,10 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
+            <Card className="border hover:shadow-md transition-shadow">
               <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-gradient-to-r from-accent to-warning flex items-center justify-center mb-4">
-                  <Zap className="h-6 w-6 text-accent-foreground" />
+                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Zap className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle>Instant Payouts</CardTitle>
               </CardHeader>
@@ -111,10 +102,10 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
+            <Card className="border hover:shadow-md transition-shadow">
               <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-gradient-to-r from-primary to-secondary flex items-center justify-center mb-4">
-                  <TrendingUp className="h-6 w-6 text-primary-foreground" />
+                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <TrendingUp className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle>Growing Returns</CardTitle>
               </CardHeader>
@@ -125,10 +116,10 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
+            <Card className="border hover:shadow-md transition-shadow">
               <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-gradient-to-r from-secondary to-accent flex items-center justify-center mb-4">
-                  <Globe className="h-6 w-6 text-secondary-foreground" />
+                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Globe className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle>Global Access</CardTitle>
               </CardHeader>
@@ -139,10 +130,10 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
+            <Card className="border hover:shadow-md transition-shadow">
               <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-gradient-to-r from-accent to-primary flex items-center justify-center mb-4">
-                  <Lock className="h-6 w-6 text-accent-foreground" />
+                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Lock className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle>Privacy First</CardTitle>
               </CardHeader>
@@ -165,11 +156,7 @@ const Index = () => {
               Join thousands of users already building wealth through decentralized savings circles. 
               Your financial future starts with a single click.
             </p>
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity shadow-lg"
-              asChild
-            >
+            <Button size="lg" asChild>
               <Link to="/dashboard" className="flex items-center">
                 Launch Your Circle Now
                 <ArrowRight className="ml-2 h-5 w-5" />
