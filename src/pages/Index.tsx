@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Navigation } from "@/components/ui/navigation";
 import { ArrowRight, Shield, Users, Zap, TrendingUp, Globe, Lock } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-savings-circle.jpg";
+import heroImage from "@/assets/hero-simple-circle.jpg";
 
 const Index = () => {
   return (
@@ -39,11 +39,14 @@ const Index = () => {
             </div>
             
             <div className="flex justify-center">
-              <img 
-                src={heroImage} 
-                alt="Savings Circle Community" 
-                className="rounded-lg w-full max-w-md"
-              />
+              <div className="relative">
+                <img 
+                  src={heroImage} 
+                  alt="Simple Savings Circle Community" 
+                  className="rounded-2xl w-full max-w-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-primary/5 to-transparent"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -59,87 +62,87 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="border hover:shadow-md transition-shadow">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <Shield className="h-6 w-6 text-primary" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <Card className="group hover:scale-105 transition-all duration-300 border-2 hover:border-primary/20">
+              <CardHeader className="text-center">
+                <div className="h-16 w-16 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center mb-4 mx-auto group-hover:rotate-6 transition-transform">
+                  <Shield className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle>Blockchain Security</CardTitle>
+                <CardTitle className="text-xl">Secure</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  All transactions are secured by smart contracts, ensuring complete transparency and eliminating the need for a central authority.
+              <CardContent className="text-center">
+                <p className="text-muted-foreground text-sm">
+                  Blockchain-powered security ensures your funds are always protected.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border hover:shadow-md transition-shadow">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-primary" />
+            <Card className="group hover:scale-105 transition-all duration-300 border-2 hover:border-primary/20">
+              <CardHeader className="text-center">
+                <div className="h-16 w-16 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center mb-4 mx-auto group-hover:rotate-6 transition-transform">
+                  <Users className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle>Trusted Community</CardTitle>
+                <CardTitle className="text-xl">Community</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Join verified groups or create your own with friends, family, or colleagues. Build financial trust through shared goals.
+              <CardContent className="text-center">
+                <p className="text-muted-foreground text-sm">
+                  Join trusted groups and build wealth together with friends.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border hover:shadow-md transition-shadow">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <Zap className="h-6 w-6 text-primary" />
+            <Card className="group hover:scale-105 transition-all duration-300 border-2 hover:border-primary/20">
+              <CardHeader className="text-center">
+                <div className="h-16 w-16 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center mb-4 mx-auto group-hover:rotate-6 transition-transform">
+                  <Zap className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle>Instant Payouts</CardTitle>
+                <CardTitle className="text-xl">Instant</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Automatic distributions when it's your turn. No delays, no manual processing. Smart contracts handle everything seamlessly.
+              <CardContent className="text-center">
+                <p className="text-muted-foreground text-sm">
+                  Automatic payouts when it's your turn. No waiting, no delays.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border hover:shadow-md transition-shadow">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <TrendingUp className="h-6 w-6 text-primary" />
+            <Card className="group hover:scale-105 transition-all duration-300 border-2 hover:border-primary/20">
+              <CardHeader className="text-center">
+                <div className="h-16 w-16 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center mb-4 mx-auto group-hover:rotate-6 transition-transform">
+                  <TrendingUp className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle>Growing Returns</CardTitle>
+                <CardTitle className="text-xl">Growing</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Pool funds can earn yield through DeFi protocols while waiting for distribution, maximizing value for all members.
+              <CardContent className="text-center">
+                <p className="text-muted-foreground text-sm">
+                  Earn yields while your funds wait for distribution.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border hover:shadow-md transition-shadow">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <Globe className="h-6 w-6 text-primary" />
+            <Card className="group hover:scale-105 transition-all duration-300 border-2 hover:border-primary/20">
+              <CardHeader className="text-center">
+                <div className="h-16 w-16 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center mb-4 mx-auto group-hover:rotate-6 transition-transform">
+                  <Globe className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle>Global Access</CardTitle>
+                <CardTitle className="text-xl">Global</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Connect with savers worldwide. No geographical limitations, supporting multiple currencies and payment methods.
+              <CardContent className="text-center">
+                <p className="text-muted-foreground text-sm">
+                  Connect with savers worldwide, no geographical limits.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border hover:shadow-md transition-shadow">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <Lock className="h-6 w-6 text-primary" />
+            <Card className="group hover:scale-105 transition-all duration-300 border-2 hover:border-primary/20">
+              <CardHeader className="text-center">
+                <div className="h-16 w-16 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center mb-4 mx-auto group-hover:rotate-6 transition-transform">
+                  <Lock className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle>Privacy First</CardTitle>
+                <CardTitle className="text-xl">Private</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Your financial data remains private. Only circle members can see group activities, with optional anonymity features.
+              <CardContent className="text-center">
+                <p className="text-muted-foreground text-sm">
+                  Your data stays private with optional anonymity features.
                 </p>
               </CardContent>
             </Card>
