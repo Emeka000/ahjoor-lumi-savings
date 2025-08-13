@@ -85,7 +85,7 @@ const Dashboard = () => {
             style={{ backgroundImage: `url(${dashboardBg})` }}
           />
           <div className="relative container mx-auto px-4 py-12">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div className="text-center space-y-6">
               <div>
                 <h1 className="text-3xl font-bold mb-2">Welcome back! 👋</h1>
                 <p className="text-muted-foreground">
