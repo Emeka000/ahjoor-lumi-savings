@@ -12,7 +12,8 @@ import {
   TrendingUp, 
   Clock,
   CheckCircle,
-  AlertCircle
+  AlertCircle,
+  Wallet
 } from "lucide-react";
 import dashboardBg from "@/assets/dashboard-bg.jpg";
 
@@ -83,12 +84,18 @@ const Dashboard = () => {
                   Manage your savings circles and track your progress toward financial goals.
                 </p>
               </div>
-              <CreateCircleDialog>
-                <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
-                  <Plus className="h-4 w-4 mr-2" />
-                  Create New Circle
+              <div className="flex items-center gap-3">
+                <Button className="bg-gradient-to-r from-accent to-warning hover:opacity-90 transition-opacity">
+                  <Wallet className="h-4 w-4 mr-2" />
+                  Connect Wallet
                 </Button>
-              </CreateCircleDialog>
+                <CreateCircleDialog>
+                  <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
+                    <Plus className="h-4 w-4 mr-2" />
+                    Create New Circle
+                  </Button>
+                </CreateCircleDialog>
+              </div>
             </div>
           </div>
         </div>
