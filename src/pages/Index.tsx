@@ -1,12 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Navigation } from "@/components/ui/navigation";
-import { ArrowRight, Users, Shield, Zap, LogIn } from "lucide-react";
+import { ArrowRight, Users, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
-import { AuthDialog } from "@/components/auth/AuthDialog";
-import { useAuth } from "@/components/auth/AuthProvider";
 
 const Index = () => {
-  const { user, loading } = useAuth();
 
   return (
     <div className="min-h-screen bg-background">
@@ -26,26 +23,15 @@ const Index = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            {user ? (
-              <Button size="lg" className="text-lg px-8 py-6" asChild>
-                <Link to="/dashboard" className="flex items-center">
-                  Go to Dashboard
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            ) : (
-              <>
-                <AuthDialog>
-                  <Button size="lg" className="text-lg px-8 py-6" disabled={loading}>
-                    <LogIn className="mr-2 h-5 w-5" />
-                    Sign In / Sign Up
-                  </Button>
-                </AuthDialog>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-6">
-                  Learn More
-                </Button>
-              </>
-            )}
+            <Button size="lg" className="text-lg px-8 py-6" asChild>
+              <Link to="/dashboard" className="flex items-center">
+                Go to Dashboard
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" className="text-lg px-8 py-6">
+              Learn More
+            </Button>
           </div>
           
           {/* Simple Feature Grid */}
