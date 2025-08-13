@@ -69,6 +69,14 @@ const Dashboard = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
+      {/* Connect Wallet Button - Top Right Corner */}
+      <div className="fixed top-20 right-4 z-40">
+        <Button className="bg-gradient-to-r from-accent to-warning hover:opacity-90 transition-opacity shadow-lg">
+          <Wallet className="h-4 w-4 mr-2" />
+          Connect Wallet
+        </Button>
+      </div>
+      
       <div className="pt-16">
         {/* Hero Banner */}
         <div className="relative overflow-hidden bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10">
@@ -84,18 +92,12 @@ const Dashboard = () => {
                   Manage your savings circles and track your progress toward financial goals.
                 </p>
               </div>
-              <div className="flex items-center gap-3">
-                <Button className="bg-gradient-to-r from-accent to-warning hover:opacity-90 transition-opacity">
-                  <Wallet className="h-4 w-4 mr-2" />
-                  Connect Wallet
+              <CreateCircleDialog>
+                <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
+                  <Plus className="h-4 w-4 mr-2" />
+                  Create New Circle
                 </Button>
-                <CreateCircleDialog>
-                  <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
-                    <Plus className="h-4 w-4 mr-2" />
-                    Create New Circle
-                  </Button>
-                </CreateCircleDialog>
-              </div>
+              </CreateCircleDialog>
             </div>
           </div>
         </div>
