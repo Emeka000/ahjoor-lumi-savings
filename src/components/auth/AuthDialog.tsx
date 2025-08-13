@@ -7,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { supabase } from "@/lib/supabase";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, Mail, Lock, User } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface AuthDialogProps {
   children: React.ReactNode;
@@ -16,6 +17,7 @@ export function AuthDialog({ children }: AuthDialogProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const handleSignUp = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -76,6 +78,7 @@ export function AuthDialog({ children }: AuthDialogProps) {
         description: "You've been successfully signed in.",
       });
       setIsOpen(false);
+      navigate("/dashboard");
     } catch (error: any) {
       toast({
         title: "Error",
