@@ -77,18 +77,12 @@ export function Navigation() {
               </DropdownMenuContent>
             </DropdownMenu>
           ) : (
-            <div className="flex items-center space-x-2">
-              <AuthDialog>
-                <Button size="sm" variant="outline">
-                  <LogIn className="h-4 w-4 mr-2" />
-                  Sign In
-                </Button>
-              </AuthDialog>
+            <AuthDialog>
               <Button size="sm" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
-                <Wallet className="h-4 w-4 mr-2" />
-                Connect Wallet
+                <LogIn className="h-4 w-4 mr-2" />
+                Sign In
               </Button>
-            </div>
+            </AuthDialog>
           )}
         </div>
       </div>
