@@ -69,13 +69,6 @@ const Dashboard = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Connect Wallet Button - Top Right Corner */}
-      <div className="fixed top-20 right-4 z-40">
-        <Button className="bg-gradient-to-r from-accent to-warning hover:opacity-90 transition-opacity shadow-lg">
-          <Wallet className="h-4 w-4 mr-2" />
-          Connect Wallet
-        </Button>
-      </div>
       
       <div className="pt-16">
         {/* Hero Banner */}

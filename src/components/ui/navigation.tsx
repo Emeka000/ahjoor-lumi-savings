@@ -1,21 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-import { Users, Wallet, BarChart3, User, LogOut, LogIn } from "lucide-react";
+import { Users, Wallet, BarChart3 } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useAuth } from "@/components/auth/AuthProvider";
-import { AuthDialog } from "@/components/auth/AuthDialog";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 export function Navigation() {
   const location = useLocation();
-  const navigate = useNavigate();
-  const { user, signOut } = useAuth();
   const isActive = (path: string) => location.pathname === path;
-
-  const handleSignOut = async () => {
-    await signOut();
-    navigate("/");
-  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-xl">
@@ -53,37 +43,10 @@ export function Navigation() {
 
         <div className="flex items-center space-x-2">
           <ThemeToggle />
-          {user ? (
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="sm" className="flex items-center space-x-2">
-                  <User className="h-4 w-4" />
-                  <span className="hidden sm:inline">
-                    {user.user_metadata?.full_name || user.email}
-                  </span>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                <DropdownMenuItem asChild>
-                  <Link to="/dashboard" className="flex items-center space-x-2">
-                    <BarChart3 className="h-4 w-4" />
-                    <span>Dashboard</span>
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={handleSignOut} className="flex items-center space-x-2">
-                  <LogOut className="h-4 w-4" />
-                  <span>Sign Out</span>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          ) : (
-            <AuthDialog>
-              <Button size="sm" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
-                <LogIn className="h-4 w-4 mr-2" />
-                Sign In
-              </Button>
-            </AuthDialog>
-          )}
+          <Button size="sm" className="bg-gradient-to-r from-accent to-warning hover:opacity-90 transition-opacity">
+            <Wallet className="h-4 w-4 mr-2" />
+            Connect Wallet
+          </Button>
         </div>
       </div>
     </nav>
